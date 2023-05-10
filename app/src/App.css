@@ -1,42 +1,148 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin:0px;
+  padding: 0px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container{
+  display: flex;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/** 
+  Header
+*/
+
+header{
+  width:45%;
+  display: flex;
+  align-items: flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container-header{
+  height: 100vh;
+  width: 17.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.card {
-  padding: 2em;
+/** 
+  End header
+*/
+
+/**
+  Main
+*/
+
+main{
+  position: relative;
+  display: flex;
+  width: 100vw;
 }
 
-.read-the-docs {
-  color: #888;
+.main-container{
+ align-items: flex-end;
 }
+
+/** 
+  End main
+*/
+
+
+/** 
+  Navbar
+*/
+
+.button-style a:hover{
+  color: #333;
+  text-decoration: none;
+  background-color: #dbd8d8;
+  border-radius: 2rem;
+}
+
+.button-style a{
+  padding: 0.8rem;
+  padding-top: 0.4rem;
+  color: #333;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+.button-text-home{
+  padding-left: 1rem;
+  font-weight: 700;
+}
+
+.button-text{
+  padding-left: 1rem;
+  font-weight: 400;
+}
+
+
+.button-style li{
+  margin: 2rem ;
+  font-size: 1.5rem;
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tweet-button{
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  width: 90%;
+  font-weight: 500;
+  color: white;
+  border-radius: 3rem;
+  background-color: rgb(29, 155, 240);
+}
+
+/** 
+  End navbar
+*/
+
+
+/** 
+  Account-switch
+*/
+
+.container-account-switch{
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.img-account-switch{
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border-radius: 9999px;
+}
+
+.text-account-switch{
+  margin-right: 5rem;
+}
+
+.username-account-switch p{
+  font-weight: 700;
+}
+
+.id-account-switch p{
+  color: grey ;
+}
+
+.ellipsis-account-switch{
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+
+/** 
+  End account-switch
+*/
