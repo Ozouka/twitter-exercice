@@ -1,10 +1,16 @@
 import React from 'react'
+import Tweet from './Tweet'
+import TopHeadTwitter from './TopHeadTwitter'
 
 const Main = () => {
   return (
         <main>
             <div className='main-container'>
-                Test
+                <TopHeadTwitter/>
+                <Tweet/>
+                <Tweet/>
+                <Tweet/>
+                <Tweet/>
             </div>
         </main>
   )

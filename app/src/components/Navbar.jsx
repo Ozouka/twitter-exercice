@@ -23,7 +23,7 @@ const Navbar = () => {
         </ul>
         <button className='tweet-button'>Tweet</button>
 
-        <NavAccoutSwitch/>
+        <NavAccoutSwitch />
     </div>
   )
 }
