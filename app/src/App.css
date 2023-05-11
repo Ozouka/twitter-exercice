@@ -4,6 +4,11 @@
   padding: 0px;
 }
 
+button, textarea, input, a{
+  outline: none;
+  outline-offset: 0;
+}
+
 .container{
   display: flex;
 
@@ -51,7 +56,6 @@ main{
 .trending-container{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 /** 
@@ -66,7 +70,7 @@ main{
 .button-style a:hover{
   color: #333;
   text-decoration: none;
-  background-color: #dbd8d8;
+  background-color: #E7E7E8;
   border-radius: 2rem;
 }
 
@@ -106,6 +110,7 @@ main{
   color: white;
   border-radius: 3rem;
   background-color: rgb(29, 155, 240);
+  
 }
 
 /** 
@@ -119,7 +124,6 @@ main{
 
 .container-account-switch{
   margin-bottom: 2rem;
-  padding-left: 2rem;
   position: absolute;
   bottom: 0;
   box-sizing: border-box;
@@ -334,11 +338,6 @@ main{
   font-family: inherit;
 }
 
-.content-tweet textarea:focus{
-  outline: none;
-  outline-offset: 0;
-}
-
 .tweet-option{
   display: flex;
   flex-direction: row;
@@ -383,14 +382,16 @@ main{
 */
 
 .search-bar{
-  position:fixed;
+  z-index:1;
+  position: sticky;
+  top: 0 ;
   margin-left: 0rem;
   display: flex;
   justify-content: flex-start;
   margin-top: 0.6rem;
   height: 53px;
   width: 350px;
-  background-color: #dbd8d8;
+  background-color: #EFF3F4;
   border: inherit;
   border-radius: 55px;
 }
@@ -407,18 +408,136 @@ main{
 }
 
 .content-right-search-bar input{
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
   width:  9rem;
   font-size: 1rem;
-  background-color: #dbd8d8;
+  background-color: #EFF3F4;
   border: inherit;
   border-radius: 55px;
 }
-
-
 
 /**
   End Searchbar
 */
 
 
+/**
+  Trending
+*/
+
+.container-trending{
+  position:sticky;
+  top: 0;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  background-color: #F7F9F9;
+  border-radius: 50px;
+}
+
+.head-trending{
+  margin-top: 1.5rem;
+  margin-left: 1.2rem;
+}
+
+.trend-h1{
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.container-trending h1{
+  font-size: 1.2rem;
+}
+
+.content-trending{
+  margin-top: 2rem;
+}
+
+.suggest-follow{
+  margin-top: 1rem;
+}
+
+/**
+  End Trending
+*/
+
+/**
+  Trending text
+*/
+
+.container-trending-text{
+  display: flex;
+  margin-bottom: 1.2rem;
+  margin-left: 1.2rem;
+}
+
+.content-left-tt{
+  width:85%;
+}
+
+.content-right-tt{
+  margin-top: 1rem;
+  width:15%;
+}
+
+/**
+  End Trending text
+*/
+
+/**
+  SuggestFollow
+*/
+
+.container-sf{
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.head-sf{
+  margin-top: 2.5rem;
+  margin-left: 2.2rem;
+}
+
+.sf-h1{
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.content-sf{
+  display: flex;
+  justify-content: row;
+  margin-top: 1rem;
+}
+
+
+.username-sf{
+  margin-left: 1rem;
+}
+
+.id-sf{
+  margin-left: 1rem;
+}
+
+.id-sf p{
+  color: grey
+}
+
+.img-sf img{
+  height: 50px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+.button-sf button{
+  margin-left: 2.5rem;
+  font-size: 1.2rem;
+  width: 70%;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  border-radius: 3rem;
+  background-color: rgb(29, 155, 240);
+}
+
+
+/**
+  End SuggestFollow
+*/

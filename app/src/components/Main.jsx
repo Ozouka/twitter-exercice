@@ -4,6 +4,7 @@ import TopHeadTwitter from './TopHeadTwitter'
 import CreateTweet from './CreateTweet'
 import Trending from './Trending'
 import Searchbar from './Searchbar'
+import SuggestFollow from './SuggestFollow'
 
 const Main = () => {
   return (
@@ -19,6 +20,12 @@ const Main = () => {
             <div className="trending-container">
               <Searchbar/>
               <Trending/>
+              <div className="head-sf">
+                <span className='sf-h1'>Who to follow</span>
+              </div>
+              <SuggestFollow/>
+              <SuggestFollow/>
+              <SuggestFollow/>
             </div>
         </main>
   )
