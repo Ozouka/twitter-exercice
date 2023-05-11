@@ -2,6 +2,8 @@ import React from 'react'
 import Tweet from './Tweet'
 import TopHeadTwitter from './TopHeadTwitter'
 import CreateTweet from './CreateTweet'
+import Trending from './Trending'
+import Searchbar from './Searchbar'
 
 const Main = () => {
   return (
@@ -13,6 +15,10 @@ const Main = () => {
                 <Tweet/>
                 <Tweet/>
                 <Tweet/>
+            </div>
+            <div className="trending-container">
+              <Searchbar/>
+              <Trending/>
             </div>
         </main>
   )

@@ -45,7 +45,13 @@ main{
 
 .main-container{
  align-items: flex-end;
- width: 100%;
+ width: 58%;
+}
+
+.trending-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /** 
@@ -167,7 +173,6 @@ main{
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  max-width: 650px;
   border-bottom: 0.1rem rgb(230, 230, 230) solid;
   border-left: 0.1rem rgb(230, 230, 230) solid;
   border-right: 0.1rem rgb(230, 230, 230) solid;
@@ -226,13 +231,12 @@ main{
 */
 
 /**
-  TopHeadTwitter
+  TopHeadTweet
 */
 
 .container-tophead{
   padding-left: 1rem;
   padding-bottom: 1rem;
-  max-width: 650px;
   border: 0.1rem rgb(230, 230, 230) solid;
 }
 
@@ -298,7 +302,6 @@ main{
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
-  max-width: 650px;
   border-bottom: 0.1rem rgb(230, 230, 230) solid;
   border-left: 0.1rem rgb(230, 230, 230) solid;
   border-right: 0.1rem rgb(230, 230, 230) solid;
@@ -318,8 +321,104 @@ main{
     border-radius: 9999px;
 }
 
+.content-tweet textarea{
+  margin-top: 1rem;
+  margin-left: 0.8rem;
+  height: auto;
+  min-width: 450px;
+  resize: vertical;
+  overflow: hidden;
+  border: none;
+  resize: none;
+  font-size: 1.1rem;
+  font-family: inherit;
+}
+
+.content-tweet textarea:focus{
+  outline: none;
+  outline-offset: 0;
+}
+
+.tweet-option{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.tweet-option ul{
+  display: flex;
+}
+
+.tweet-option li{
+  list-style: none;
+  margin: 0 0.2rem;
+}
+
+.content-right-bottom{
+  display: flex;
+}
+
+.button-tweet{
+  width: 50%;
+  align-items: flex-end;
+}
+
+.button-tweet button{
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 3rem;
+  background-color: rgb(29, 155, 240);
+}
+
+
 /**
   End CreateTweet
+*/
+
+
+/**
+  Searchbar
+*/
+
+.search-bar{
+  position:fixed;
+  margin-left: 0rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.6rem;
+  height: 53px;
+  width: 350px;
+  background-color: #dbd8d8;
+  border: inherit;
+  border-radius: 55px;
+}
+
+.content-left-search-bar{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 10%;
+}
+
+.content-right-search-bar{
+  width: 90%;
+  margin-top: 0.8rem;
+}
+
+.content-right-search-bar input{
+  margin-top: 0.2rem;
+  width:  9rem;
+  font-size: 1rem;
+  background-color: #dbd8d8;
+  border: inherit;
+  border-radius: 55px;
+}
+
+
+
+/**
+  End Searchbar
 */
 
 
