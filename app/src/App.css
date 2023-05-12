@@ -56,6 +56,15 @@ main{
 .trending-container{
   display: flex;
   flex-direction: column;
+  margin-left: 2.2rem;
+}
+
+.container-suggest-follow{
+  position: sticky;
+  top: 815px;
+  margin-top: 2rem;
+  background-color: #F7F9F9;
+  border-radius: 50px;
 }
 
 /** 
@@ -230,6 +239,83 @@ main{
   border-radius: 1.2rem;
 }
 
+.tweet-tools{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.tweet-message{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color:#61727D ;
+}
+
+.tweet-message span{
+  margin-left: 0.4rem;
+}
+
+.tweet-message:hover{
+  color: #4EB0F2;
+}
+
+.tweet-rt{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color:#61727D;
+}
+
+.tweet-rt span{
+  margin-left: 0.4rem;
+}
+
+.tweet-rt:hover{
+  color:#0DBD83;
+}
+
+.tweet-like{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color:#61727D;
+}
+
+.tweet-like span{
+  margin-left: 0.4rem;
+}
+
+.tweet-like:hover{
+  color: #F9318D;
+}
+
+.tweet-stats{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color:#61727D;
+}
+
+.tweet-stats span{
+  margin-left: 0.4rem;
+}
+
+.tweet-stats:hover{
+  color: #4EB0F2;
+}
+
+.tweet-share{
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.tweet-share:hover{
+  color: #4EB0F2;
+}
+
 /**
   End Tweet
 */
@@ -239,9 +325,12 @@ main{
 */
 
 .container-tophead{
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
   padding-left: 1rem;
   padding-bottom: 1rem;
-  border: 0.1rem rgb(230, 230, 230) solid;
+  background-color:0.1rem rgba(255, 255, 255, 0.85)solid;
 }
 
 .container-tophead p{
@@ -427,9 +516,8 @@ main{
 
 .container-trending{
   position:sticky;
-  top: 0;
+  top: -25px;
   margin-top: 2rem;
-  margin-left: 2rem;
   background-color: #F7F9F9;
   border-radius: 50px;
 }
@@ -490,10 +578,11 @@ main{
 .container-sf{
   margin-top: 1rem;
   margin-left: 2rem;
+  margin-bottom: 1rem;
 }
 
 .head-sf{
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   margin-left: 2.2rem;
 }
 
@@ -534,7 +623,7 @@ main{
   font-weight: 500;
   color: white;
   border-radius: 3rem;
-  background-color: rgb(29, 155, 240);
+  background-color: #272C30;
 }
 
 

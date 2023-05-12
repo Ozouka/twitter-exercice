@@ -20,12 +20,14 @@ const Main = () => {
             <div className="trending-container">
               <Searchbar/>
               <Trending/>
-              <div className="head-sf">
-                <span className='sf-h1'>Who to follow</span>
+              <div className="container-suggest-follow">
+                <div className="head-sf">
+                  <span className='sf-h1'>Who to follow</span>
+                </div>
+                <SuggestFollow/>
+                <SuggestFollow/>
+                <SuggestFollow/>
               </div>
-              <SuggestFollow/>
-              <SuggestFollow/>
-              <SuggestFollow/>
             </div>
         </main>
   )

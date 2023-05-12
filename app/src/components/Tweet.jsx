@@ -1,4 +1,8 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMessage, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faRetweet, faChartSimple, faUpload } from '@fortawesome/free-solid-svg-icons'
+
 
 const Tweet = () => {
 
@@ -49,6 +53,27 @@ const Tweet = () => {
             <div className="tweet-content">
                 <span>La métropole de Lyon va instaurer la semaine de 4 jours à partir du 1er septembre 💼</span>
                 <img src="./src/images/lyon.png" alt="Image de Lyon"/>
+            </div>
+            <div className="tweet-tools">
+                <div className="tweet-message">
+                    <FontAwesomeIcon icon={faMessage} />
+                    <span>93</span>
+                </div>
+                <div className="tweet-rt">
+                    <FontAwesomeIcon icon={faRetweet} />
+                    <span>1,880</span>
+                </div>
+                <div className="tweet-like">
+                    <FontAwesomeIcon icon={faHeart} />
+                    <span>8,514</span>
+                </div>
+                <div className="tweet-stats">
+                    <FontAwesomeIcon icon={faChartSimple} />
+                    <span>1,3M</span>
+                </div>
+                <div className="tweet-share">
+                    <FontAwesomeIcon icon={faUpload} />
+                </div>
             </div>
         </article>
     </div>
