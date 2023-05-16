@@ -16,7 +16,7 @@ const Main = () => {
         try {
           const response = await fetch('http://localhost:3000');
           const data = await response.json();
-          setBackEndData(data.tweet1);
+          setBackEndData(data);
         } catch (error) {
           console.error(error);
         }
@@ -24,19 +24,18 @@ const Main = () => {
   
       fetchData();
 
-    }, []);
+    }, []);   
 
   return (
         <main>
             <div className='main-container'>
                 <TopHeadTwitter/>
                 <CreateTweet/>
-                <TweetContext.Provider value={backEndData}>
-                  <Tweet/>
-                  <Tweet/>
-                  <Tweet/>
-                  <Tweet/>
-                </TweetContext.Provider> 
+                {backEndData && backEndData.map((tweetData, index) => (
+                  <TweetContext.Provider key={index} value={tweetData}>
+                    <Tweet />
+                  </TweetContext.Provider>
+                ))} 
             </div>
             <div className="trending-container">
               <Searchbar/>
