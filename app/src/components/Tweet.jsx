@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState, useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMessage, faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faRetweet, faChartSimple, faUpload } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +12,23 @@ const Tweet = () => {
         hashtag: "@Karim_Zwl",
         img: "./src/images/default_profile_400x400.png"
     }
+
+    const [backEndData, setBackEndData]  = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('http://localhost:3000');
+            const data = await response.json();
+            setBackEndData(data.tweet1);
+          } catch (error) {
+            console.error(error);
+          }
+        };
+    
+        fetchData();
+
+      }, []);
 
     const currentDate = () => {
         let tabMonth = [
@@ -43,6 +61,15 @@ const Tweet = () => {
         <article className='article-tweet'>
             <div className="user-general">
                 <div className="img-user">
+                
+                {backEndData ? (
+                    <ul>
+                        <img key={backEndData.img} src={backEndData.img} alt="Test"/>
+                    </ul>
+                ) : (
+                    <p>Loading...</p>
+                )}
+
                     <img src={user1.img} alt="User image"/>
                 </div>
                 <div className="user-description">

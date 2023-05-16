@@ -12,8 +12,9 @@ const NavAccoutSwitch = () => {
     }
 
   return (
+
     <div className='container-account-switch'>
-        <div className='img-account-switch'>
+        <div className='img-account-switch'>            
             <img src={user1.img} alt="Image de profile"/>
         </div>
         <div className='text-account-switch'>
