@@ -1,34 +1,14 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMessage, faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faRetweet, faChartSimple, faUpload } from '@fortawesome/free-solid-svg-icons'
+import { TweetContext } from './TweetContext'
 
 
 const Tweet = () => {
 
-    const user1 = {
-        username : "Karim",
-        hashtag: "@Karim_Zwl",
-        img: "./src/images/default_profile_400x400.png"
-    }
-
-    const [backEndData, setBackEndData]  = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await fetch('http://localhost:3000');
-            const data = await response.json();
-            setBackEndData(data.tweet1);
-          } catch (error) {
-            console.error(error);
-          }
-        };
-    
-        fetchData();
-
-      }, []);
+    const backEndData = useContext(TweetContext);
 
     const currentDate = () => {
         let tabMonth = [
@@ -64,17 +44,27 @@ const Tweet = () => {
                 
                 {backEndData ? (
                     <ul>
-                        <img key={backEndData.img} src={backEndData.img} alt="Test"/>
+                        <img key={backEndData.img} src={backEndData.img} alt="Image utilisateur"/>
                     </ul>
                 ) : (
-                    <p>Loading...</p>
+                    <p>Chargement...</p>
                 )}
 
-                    <img src={user1.img} alt="User image"/>
                 </div>
                 <div className="user-description">
-                    <h2>{user1.username}</h2>
-                    <p>{user1.hashtag} · {currentDate()}</p>
+
+                {backEndData ? (
+                        <h2 key={backEndData.username}>{backEndData.username}</h2>  
+                ) : (
+                    <p>Chargement...</p>
+                )}
+
+                {backEndData ? (
+                        <p key={backEndData.hashtag}>{backEndData.hashtag} · {currentDate()}</p>
+                ) : (
+                    <p>Chargement...</p>
+                )}
+
                 </div>
             </div>
             <div className="tweet-content">
