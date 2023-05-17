@@ -14,13 +14,14 @@ const Main = () => {
   useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('http://localhost:3000');
+          const response = await fetch('http://localhost:3000/api/allpost');
           const data = await response.json();
           setBackEndData(data);
+          console.log(data);
         } catch (error) {
           console.error(error);
         }
-      };
+      };   
   
       fetchData();
 
@@ -30,7 +31,9 @@ const Main = () => {
         <main>
             <div className='main-container'>
                 <TopHeadTwitter/>
-                <CreateTweet/>
+                <TweetContext.Provider>
+                    <CreateTweet />
+                </TweetContext.Provider>
                 {backEndData && backEndData.map((tweetData, index) => (
                   <TweetContext.Provider key={index} value={tweetData}>
                     <Tweet />

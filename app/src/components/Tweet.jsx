@@ -10,8 +10,6 @@ const Tweet = () => {
 
     const backEndData = useContext(TweetContext);
 
-    console.log(backEndData);
-
     const currentDate = () => {
         let tabMonth = [
             {mois : "Janvier", id : 0},
